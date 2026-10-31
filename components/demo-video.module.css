@@ -1,0 +1,16 @@
+.inline { width: 100%; }
+.videoFrame { border: 1px solid #ffffff16; border-radius: 14px; overflow: hidden; background: #000; }
+.video { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: contain; background: #000; }
+.video::cue { font-family: Arial, sans-serif; font-size: 15px; color: white; background: rgb(0 0 0 / .78); }
+.toolbar { display: flex; align-items: center; gap: 20px; min-height: 66px; padding: 14px 3px; }
+.play { display: inline-flex; align-items: center; gap: 9px; min-height: 40px; border: 0; background: transparent; color: #eeeeef; font-size: 14px; padding: 4px 8px; white-space: nowrap; }
+.duration { margin-inline-start: 3px; color: #a0a0aa; font-size: 12px; font-variant-numeric: tabular-nums; }
+.chapters { display: flex; align-items: center; justify-content: center; gap: 6px; margin-inline: auto; }
+.chapters button { min-height: 38px; padding: 9px 13px; border: 1px solid transparent; border-radius: 10px; background: transparent; color: #a0a0aa; font-size: 13px; }
+.chapters button[aria-current='step'] { color: #ffc196; background: #ffffff08; border-color: #ffffff14; }
+.notice { color: #e3c3a1; font-size: 12px; line-height: 1.6; padding: 10px 8px; }
+.notice a { text-decoration: underline; }
+@media(hover:hover) { .chapters button:hover { color: white; background: #ffffff08; } .play:hover { color: white; } }
+@media(max-width:740px) { .toolbar { gap: 9px; flex-wrap: wrap; } .chapters { order: 3; flex-basis: 100%; justify-content: flex-start; flex-wrap: wrap; margin: 0; } .chapters button { font-size: 12px; padding-inline: 10px; } }
+@media(max-width:700px) { .video { aspect-ratio: 5 / 8; max-height: none; } }
+@media(prefers-reduced-motion:no-preference) { .chapters button { transition: background-color 150ms cubic-bezier(.2,0,0,1); } }

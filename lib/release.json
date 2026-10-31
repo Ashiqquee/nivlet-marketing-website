@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "build": "2",
+  "href": "/download/Nivlet-0.1.dmg",
+  "file": "Nivlet-0.1.dmg",
+  "bytes": 1780366,
+  "sha256": "47427ce1e745d731c17ab4eac7b7fdf4861e0995eca865fd8c0a389dba4d75e4",
+  "notarized": false,
+  "minimumMacOS": "14.0",
+  "architectures": [
+    "arm64"
+  ],
+  "sourceCommit": "d34ce985c865bea902bff84c9930fa99c1b60ca8",
+  "date": "2026-10-31"
+}

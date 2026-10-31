@@ -1,0 +1,15 @@
+Nivlet walkthrough — about 15 seconds, no sound.
+
+00:00 Prompts
+The native Prompts shelf shows saved writing rules and reusable requests in the Design project sample pocket.
+
+00:03 Fill-in blanks
+The Explain a concept template opens. Topic is filled with “design systems” and Audience with “a new teammate”. The complete preview updates as the text is entered. The footage is cropped to make the fields and preview easier to read. No copy or send action is performed.
+
+00:09 References
+The Reference shelf shows a stored layout image and a page brief with their original filenames. No external upload is performed.
+
+00:12 Scratchpad
+The Scratchpad shows next questions and three checklist rows, including one completed task.
+
+This is edited footage of the actual native Nivlet app with synthetic sample content. Idle time was trimmed, the typing section was sped up to 1.25× and the view was enlarged where useful. The app UI was not generated or redrawn. This is not a timing benchmark, persistence test or proof of a signed release.

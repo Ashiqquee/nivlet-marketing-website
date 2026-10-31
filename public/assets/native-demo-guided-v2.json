@@ -1,0 +1,87 @@
+{
+  "source": "native-demo.mp4",
+  "source_sha256": "8bc0c2100c3e1948c046cef246c4dfd939b2a7a6befbcd49266611b032b97348",
+  "output": "native-demo-guided-v2.mp4",
+  "poster": "native-demo-guided-v2.jpg",
+  "frame": [
+    1440,
+    900
+  ],
+  "mobile_frame": [
+    720,
+    1152
+  ],
+  "mobile_output": "native-demo-guided-mobile-v2.mp4",
+  "fps": 30,
+  "planned_duration": 14.7,
+  "audio": false,
+  "chapters": [
+    {
+      "id": "prompts",
+      "label": "Prompts",
+      "start": 0
+    },
+    {
+      "id": "blanks",
+      "label": "Fill-in blanks",
+      "start": 2.6
+    },
+    {
+      "id": "references",
+      "label": "References",
+      "start": 9.0
+    },
+    {
+      "id": "scratchpad",
+      "label": "Scratchpad",
+      "start": 11.7
+    }
+  ],
+  "edits": [
+    {
+      "id": "prompts",
+      "label": "Prompts",
+      "start": 2.1,
+      "end": 4.7,
+      "speed": 1,
+      "title": "Find a prompt.",
+      "body": "Writing rules and reusable requests,\nkept in a project pocket.",
+      "crop": null,
+      "x": 810
+    },
+    {
+      "id": "blanks",
+      "label": "Fill-in blanks",
+      "start": 4.8,
+      "end": 12.8,
+      "speed": 1.25,
+      "title": "Fill the blanks.",
+      "body": "Add the topic and audience.\nReview the text as it updates.",
+      "crop": "720:880:120:160",
+      "x": 760
+    },
+    {
+      "id": "references",
+      "label": "References",
+      "start": 13.95,
+      "end": 16.65,
+      "speed": 1,
+      "title": "Keep references.",
+      "body": "Original files,\nwith labels and notes.",
+      "crop": null,
+      "x": 810
+    },
+    {
+      "id": "scratchpad",
+      "label": "Scratchpad",
+      "start": 17,
+      "end": 20,
+      "speed": 1,
+      "title": "Leave a note.",
+      "body": "Questions and checklists\nfor the next session.",
+      "crop": "720:1000:120:0",
+      "x": 794
+    }
+  ],
+  "note": "Actual captured pixels. Trimmed pauses, one 1.25x typing section, explicit focus crops and editorial captions. Not a performance measurement."
+}

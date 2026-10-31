@@ -1,0 +1,185 @@
+{
+  "format_version": 1,
+  "captured_date": "2026-10-31",
+  "source_commit": "36bf5d88ccfda0513b32a0a5d556a0a0ceb566f8",
+  "source_native_changes": false,
+  "bundle_id": "ashique.nivlet.phase8media",
+  "configuration": "Debug / NivletPreview YES / in-memory synthetic Design project sample",
+  "host": "M3 MacBook Air, arm64, macOS 26.6.2 (25G83)",
+  "toolchain": "Xcode 27.1; macOS 27 SDK; Swift 6.4",
+  "native_window_points": [
+    420,
+    640
+  ],
+  "pixels": [
+    840,
+    1280
+  ],
+  "capture": "ScreenCaptureKit window-only recording and screencapture -l screenshots; no audio or clipboard writes",
+  "recording_seconds": 21.366667,
+  "recording_fps": 30,
+  "encoding": "H.264, yuv420p, CRF 18, faststart; original timeline, no composited controls",
+  "illustrative_surroundings": [
+    "CSS-drawn animated amber beams in the hero and closing section; no image asset",
+    "Original CSS desktop scene with an abstract, unbranded chat window around the actual native screenshots",
+    "Existing owner-supplied folded N identity; transparent wordmark rendered in white with CSS"
+  ],
+  "limitations": [
+    "Debug preview, not signed release evidence",
+    "No external AI upload/copy success demonstrated",
+    "Recheck media against accepted shipping candidate"
+  ],
+  "assets": [
+    {
+      "file": "prompts.png",
+      "bytes": 230727,
+      "sha256": "2c2b73493fa927412e8440faa3db5756f3af8c8896d5c2ad959e7472a380d662"
+    },
+    {
+      "file": "fill-in-prompt.png",
+      "bytes": 179289,
+      "sha256": "63b3cdd6e6ce9ca2430c1bbedfd04100e116e7e8daa8a6eaabccb5fca3c58478"
+    },
+    {
+      "file": "references.png",
+      "bytes": 147493,
+      "sha256": "89b9eea33a688f414c9a8fc461411740d7ddac1d91ffc7acec8a02757c5a5ce2"
+    },
+    {
+      "file": "scratchpad.png",
+      "bytes": 159363,
+      "sha256": "ab35114b8495a15f5ce61b5f190d70d8a820dd4bb6afa5aa58d9eb16acdc4ad0"
+    },
+    {
+      "file": "native-demo.mp4",
+      "bytes": 873889,
+      "sha256": "8bc0c2100c3e1948c046cef246c4dfd939b2a7a6befbcd49266611b032b97348"
+    },
+    {
+      "file": "native-demo.vtt",
+      "bytes": 907,
+      "sha256": "3ae0c1df487c1d3c0dc3ce37e7fc81ee779052b0666cb84248fa140bed9e9c3e"
+    }
+  ],
+  "design_assets": [
+    {
+      "path": "assets/amber-folds.png",
+      "kind": "generated decorative artwork; not app UI",
+      "bytes": 1629922,
+      "sha256": "20981cfd197f6faad514f87384c3aa9bbbd0da119d5e868594f5a332f8cbfd7d"
+    },
+    {
+      "path": "brand/nivlet-wordmark.png",
+      "kind": "existing identity copied without pixel changes",
+      "bytes": 458978,
+      "sha256": "ad7530cc3bae991aec72739fa6d0d1147b13371c70bb01f8b79a4f02d719b449"
+    },
+    {
+      "path": "favicon.ico",
+      "kind": "existing identity copied without pixel changes",
+      "bytes": 4953,
+      "sha256": "d237cfdc740f7062c43210d345307011bd4c60cc01ca4c73d9601158cb393d42"
+    },
+    {
+      "path": "favicon-32.png",
+      "kind": "existing identity copied without pixel changes",
+      "bytes": 1556,
+      "sha256": "5a2b44cd912b5cb5b99999026c2cb570d9b7a18d960e050fb5c156b2918c7bb4"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "kind": "existing identity copied without pixel changes",
+      "bytes": 28021,
+      "sha256": "88ff5b2ecc1dd3e4cff8a7e2d047ee8c8f18f3d2487d158ffde965f741643ce3"
+    },
+    {
+      "path": "fonts/geist-OFL.txt",
+      "kind": "bundled font licence",
+      "bytes": 4486,
+      "sha256": "71609cbb5c78b5870d712eab73a31d76622635c6ed034ab5cee3b9ecbda8685f"
+    },
+    {
+      "path": "fonts/inter-OFL.txt",
+      "kind": "bundled font licence",
+      "bytes": 4477,
+      "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+    },
+    {
+      "path": "assets/native-demo-guided-mobile-v2.jpg",
+      "kind": "edited presentation of the original native sample capture; no generated UI",
+      "bytes": 91920,
+      "sha256": "e714d44bec1266012a5553d75bcbcc7758eb080410804830b8f1ca1c388fce5a"
+    },
+    {
+      "path": "assets/native-demo-guided-mobile-v2.mp4",
+      "kind": "edited presentation of the original native sample capture; no generated UI",
+      "bytes": 369524,
+      "sha256": "ff6afd9460b6f5310b072959a6726118930e469e3a41c20f56c9b08c85487641"
+    },
+    {
+      "path": "assets/native-demo-guided-v2-transcript.txt",
+      "kind": "edited presentation of the original native sample capture; no generated UI",
+      "bytes": 1046,
+      "sha256": "1ba28f9ee4e4d256739004ba115633af95724f2cd60902885bc8033eab14b3b9"
+    },
+    {
+      "path": "assets/native-demo-guided-v2.jpg",
+      "kind": "edited presentation of the original native sample capture; no generated UI",
+      "bytes": 85323,
+      "sha256": "504475485a795059e490f544f35cacbe0154b63220272ac2100f7250943b0729"
+    },
+    {
+      "path": "assets/native-demo-guided-v2.json",
+      "kind": "edited presentation of the original native sample capture; no generated UI",
+      "bytes": 2005,
+      "sha256": "ae501d364f09b1199684b1b0c39b8036b1d5655d7b0c0026b644b6198d464c09"
+    },
+    {
+      "path": "assets/native-demo-guided-v2.mp4",
+      "kind": "edited presentation of the original native sample capture; no generated UI",
+      "bytes": 353514,
+      "sha256": "7da2a2cffd96c3d7d37bfcfd8882d52f71e533f5cf3b0f373adfda1977c4fb86"
+    },
+    {
+      "path": "assets/native-demo-guided-v2.vtt",
+      "kind": "edited presentation of the original native sample capture; no generated UI",
+      "bytes": 376,
+      "sha256": "3f05fae2546f5566431a35d81317a299fd5097c6637b081a5e707e65b9e36e8e"
+    },
+    {
+      "path": "brand/ashique-favicon.png",
+      "kind": "public favicon retrieved from the maker website at owner request",
+      "bytes": 551941,
+      "sha256": "e5943825feecb20a84750cd8bdd5aa12dae61e6dbb798d85370de27e399f8417"
+    },
+    {
+      "path": "support/buy-me-a-coffee.svg",
+      "kind": "official Buy Me a Coffee CDN logo used for the support link",
+      "bytes": 8133,
+      "sha256": "a668a2adad6bae5ee7e6d669cfa7876a75d572db71ac9a91f30c2e295bedb3de"
+    }
+  ],
+  "font": {
+    "family": "Inter",
+    "package": "@fontsource-variable/inter",
+    "version": "5.3.0",
+    "source": "locally bundled WOFF2 through next/font/local",
+    "owner_selected": false,
+    "browser_external_requests": false
+  },
+  "video_presentation": {
+    "source": "native-demo.mp4",
+    "source_unchanged": true,
+    "desktop": "native-demo-guided-v2.mp4",
+    "mobile": "native-demo-guided-mobile-v2.mp4",
+    "duration_seconds": 14.7,
+    "render_script": "scripts/render_website_demo.py",
+    "edit_decisions": "native-demo-guided-v2.json",
+    "audio": false,
+    "notes": "Idle time trimmed; template typing 1.25x; close crops of original app pixels; Geist editorial text. Not an app performance measurement."
+  },
+  "external_asset_sources": {
+    "brand/ashique-favicon.png": "https://ashique.work/icon.png?icon.1qvn6x09mx0ct.png",
+    "support/buy-me-a-coffee.svg": "https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+  }
+}

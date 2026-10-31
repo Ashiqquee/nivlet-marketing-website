@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- Source for public/og/nivlet.png (1200 × 630 social preview). Serve website/ over HTTP, open /artwork/og-card.html at a 1200 × 630 viewport and capture the page. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Nivlet social card</title>
+<style>
+  @font-face { font-family: Inter; src: url('../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2'); font-weight: 100 900; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #07080a; }
+  .card { position: relative; width: 1200px; height: 630px; font-family: Inter, sans-serif; color: #f4f4f6; -webkit-font-smoothing: antialiased; }
+  .art { position: absolute; inset: -40px -120px -40px 220px; background: url('../public/assets/amber-folds.png') center / cover no-repeat; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(90deg, #07080a 22%, #07080ae6 40%, #07080a33 70%, transparent), linear-gradient(0deg, #07080acc, transparent 35%); }
+  .copy { position: absolute; left: 80px; top: 72px; bottom: 72px; display: flex; flex-direction: column; }
+  .brand { width: 176px; height: 59px; object-fit: contain; object-position: left; filter: brightness(0) invert(1); }
+  h1 { margin: auto 0 22px; font-size: 76px; font-weight: 600; letter-spacing: -.035em; line-height: 1.02; color: white; }
+  p { margin: 0; font-size: 26px; line-height: 1.4; color: #c9c9d1; max-width: 560px; }
+  .meta { margin-top: 30px; display: flex; gap: 12px; font-size: 18px; font-weight: 500; color: #f6d9c4; }
+  .meta span { padding: 8px 16px; border-radius: 999px; background: #131417cc; box-shadow: inset 0 0 0 1px #ff9d5c55; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="art"></div>
+  <div class="shade"></div>
+  <div class="copy">
+    <img class="brand" src="../public/brand/nivlet-wordmark.png" alt="Nivlet">
+    <h1>Your prompts.<br>One click away.</h1>
+    <p>Prompts, reference files and notes in a native panel at the edge of your Mac.</p>
+    <div class="meta"><span>Free</span><span>Local and offline</span><span>Apple silicon</span></div>
+  </div>
+</div>
+</body>
+</html>
