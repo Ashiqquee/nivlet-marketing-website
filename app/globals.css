@@ -54,6 +54,8 @@
   .hero-meta { margin-block-start: 22px; font-size: 13px; line-height: 1.5; color: #a3a3ae; text-shadow: 0 0 3px #000, 0 1px 14px #000; }
   .hero-meta p { margin: 0; }
   .hero-meta .hero-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; margin-block-start: 6px; }
+  .announcement { display: inline-flex; align-items: center; gap: 8px; margin-block-start: 36px; padding: 8px 14px 8px 16px; border: 1px solid transparent; border-radius: 999px; font-size: 14px; color: #f6d9c4; text-decoration: none; background: linear-gradient(#131417, #131417) padding-box, linear-gradient(90deg, #ff9d5c99, #ffffff14 55%, #ff9d5c66) border-box; box-shadow: 0 0 30px #ff7a2f1f; }
+  .announcement svg { color: #ffb27a; }
 
   .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 22px; border: 0; border-radius: 12px; text-decoration: none; font-size: 15px; font-weight: 500; line-height: 1.2; }
   .button.small { min-height: 40px; padding-inline: 16px; font-size: 14px; }
@@ -238,7 +240,7 @@
   .site-header { min-height: 56px; gap: 12px; padding: 6px 6px 6px 10px; border-radius: 15px; }
   .brand img { width: 104px; height: 35px; }
   .nav-status { font-size: 13px; padding-inline: 12px; min-height: 40px; }
-  .hero { min-height: 680px; margin-block-start: -76px; padding-block: 170px 80px; }
+  .hero { min-height: 760px; margin-block-start: -76px; padding-block: 180px 110px; }
   .beams-group { scale: .62; }
   .hero .beams { mask-image: radial-gradient(ellipse 90% 40% at 50% 36%, #000 30%, transparent 80%); }
   .hero .beams-group { inset-block-start: 36%; }
@@ -284,6 +286,8 @@
 @media(prefers-reduced-motion:no-preference) {
   .button, .nav-status, .header-links a, .carousel-controls button { transition-property: background-color, color, scale; transition-duration: 150ms; transition-timing-function: var(--ease); }
   .button:active, .nav-status:active, .carousel-controls button:active { scale: .96; }
+  .announcement svg { transition: translate 200ms var(--ease); }
+  .announcement:hover svg { translate: 3px 0; }
   .tool-card { transition: translate 400ms var(--ease), box-shadow 400ms var(--ease); }
   .tool-card:hover { translate: 0 -4px; box-shadow: 0 0 0 1px #ffffff1f, inset 0 1px 0 #ffffff1a, 0 30px 60px #0008; }
 }

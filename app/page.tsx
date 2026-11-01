@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, EyeOff, HardDrive, MousePointerClick, WifiOff } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, EyeOff, HardDrive, MousePointerClick, WifiOff } from 'lucide-react';
 import { Beams } from '@/components/beams';
 import { NativeDemo } from '@/components/native-demo';
 import { DemoVideo } from '@/components/demo-video';
@@ -41,6 +41,7 @@ export default function Home() {
         <p className="hero-description enter" style={{ '--i': 1 } as React.CSSProperties}>Prompts, reference files and notes in a native panel at the edge of your Mac. Free, local and offline.</p>
         <div className="hero-actions enter" style={{ '--i': 2 } as React.CSSProperties}><DownloadButton /><a className="button secondary" href="#tour">Take the tour</a></div>
         <div className="hero-meta enter" style={{ '--i': 3 } as React.CSSProperties}><p>{release.macOSName} or later and Apple silicon required</p><p className="hero-links"><Link href="/releases#install">How to install</Link><Link href="/releases">Version {release.version} release notes</Link></p></div>
+        <a className="announcement enter" style={{ '--i': 4 } as React.CSSProperties} href="#tools">Four tools in one panel <ArrowRight size={14} aria-hidden="true" /></a>
       </div>
     </section>
 
