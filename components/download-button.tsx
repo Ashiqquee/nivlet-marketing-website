@@ -7,8 +7,10 @@ function AppleLogo() {
   </svg>;
 }
 
-export function DownloadButton({ className = 'button primary', label = 'Download for Mac' }: { className?: string; label?: string }) {
+// The default label drops "for Mac" visually on phones so paired buttons fit one row;
+// the Apple glyph carries it there and assistive tech still hears the full label.
+export function DownloadButton({ className = 'button primary', label }: { className?: string; label?: string }) {
   return <a className={className} href={release.href} download={release.file}>
-    <AppleLogo />{label}
+    <AppleLogo />{label ?? <span>Download<span className="wide-only"> for Mac</span></span>}
   </a>;
 }

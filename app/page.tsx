@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, EyeOff, HardDrive, MousePointerClick, WifiOff } from 'lucide-react';
+import { ArrowUpRight, EyeOff, HardDrive, MousePointerClick, WifiOff } from 'lucide-react';
 import { Beams } from '@/components/beams';
 import { NativeDemo } from '@/components/native-demo';
 import { DemoVideo } from '@/components/demo-video';
@@ -39,9 +39,8 @@ export default function Home() {
       <div className="hero-copy wrap">
         <h1 id="hero-title" className="enter" style={{ '--i': 0 } as React.CSSProperties}>Your prompts.<br />One click away.</h1>
         <p className="hero-description enter" style={{ '--i': 1 } as React.CSSProperties}>Prompts, reference files and notes in a native panel at the edge of your Mac. Free, local and offline.</p>
-        <div className="hero-actions enter" style={{ '--i': 2 } as React.CSSProperties}><DownloadButton /><a className="button secondary" href="#tour">See how it works</a></div>
+        <div className="hero-actions enter" style={{ '--i': 2 } as React.CSSProperties}><DownloadButton /><a className="button secondary" href="#tour">Take the tour</a></div>
         <div className="hero-meta enter" style={{ '--i': 3 } as React.CSSProperties}><p>{release.macOSName} or later and Apple silicon required</p><p className="hero-links"><Link href="/releases#install">How to install</Link><Link href="/releases">Version {release.version} release notes</Link></p></div>
-        <a className="announcement enter" style={{ '--i': 4 } as React.CSSProperties} href="#tools">Four tools in one panel <ArrowRight size={14} aria-hidden="true" /></a>
       </div>
     </section>
 
@@ -51,7 +50,7 @@ export default function Home() {
     </section>
 
     <section className="keys-section wrap" aria-labelledby="keys-title">
-      <div className="keys-copy" data-reveal><h2 id="keys-title">Less hunting.<br /><span>More doing.</span></h2><p>Open the panel, find what you need and get back to work. The keyboard works as well as the mouse.</p><a className="button secondary small" href="#tour">Take the tour</a></div>
+      <div className="keys-copy" data-reveal><h2 id="keys-title">Works from the keyboard.</h2><p>Open the panel, find what you need and get back to work. The mouse works too.</p><a className="button secondary small" href="#tour">Take the tour</a></div>
       <ul className="keys-board" data-reveal>{keys.map((item, index) => <li key={item.label} style={{ '--k': index } as React.CSSProperties}><span className="caps">{item.caps.map(cap => <kbd key={cap}>{cap}</kbd>)}</span><span>{item.label}</span></li>)}</ul>
     </section>
 
@@ -61,7 +60,7 @@ export default function Home() {
     </section>
 
     <section className="privacy-section wrap" id="privacy" aria-labelledby="privacy-title">
-      <div className="section-intro center" data-reveal><p className="eyebrow">Private by design</p><h2 id="privacy-title">Works offline.<br /><span>Stays on your Mac.</span></h2></div>
+      <div className="section-intro center" data-reveal><h2 id="privacy-title">Works offline.<br /><span>Stays on your Mac.</span></h2></div>
       <div className="privacy-grid" data-reveal>
         <article><HardDrive size={20} strokeWidth={1.5} aria-hidden="true" /><h3>Stored locally</h3><p>Your pockets live on your Mac. No account, cloud library or sync.</p></article>
         <article><WifiOff size={20} strokeWidth={1.5} aria-hidden="true" /><h3>No internet needed</h3><p>There’s no model, API key or provider connection. Every tool works offline.</p></article>

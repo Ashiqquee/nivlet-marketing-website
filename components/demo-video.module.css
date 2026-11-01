@@ -11,6 +11,6 @@
 .notice { color: #e3c3a1; font-size: 12px; line-height: 1.6; padding: 10px 8px; }
 .notice a { text-decoration: underline; }
 @media(hover:hover) { .chapters button:hover { color: white; background: #ffffff08; } .play:hover { color: white; } }
-@media(max-width:740px) { .toolbar { gap: 9px; flex-wrap: wrap; } .chapters { order: 3; flex-basis: 100%; justify-content: flex-start; flex-wrap: wrap; margin: 0; } .chapters button { font-size: 12px; padding-inline: 10px; } }
+@media(max-width:740px) { .toolbar { gap: 9px; flex-wrap: wrap; } .chapters { order: 3; flex-basis: 100%; display: grid; grid-template-columns: 1fr 1fr; margin: 0; } .chapters button { font-size: 14px; min-height: 44px; } }
 @media(max-width:700px) { .video { aspect-ratio: 5 / 8; max-height: none; } }
 @media(prefers-reduced-motion:no-preference) { .chapters button { transition: background-color 150ms cubic-bezier(.2,0,0,1); } }

@@ -46,8 +46,8 @@
   .chat { display: none; }
   .panelWrap { inset-inline: 50% auto; width: 290px; transform: translateX(-50%); }
   .dock { inset-block-end: 12px; width: calc(100% - 20px); justify-content: space-between; padding: 6px; }
-  .dockButton { min-width: 0; flex: 1; font-size: 10px; padding-inline: 2px; }
+  .dockButton { min-width: 0; flex: 1; font-size: 11px; padding-inline: 2px; }
   .caption { font-size: 14px; }
 }
-@media(max-width:370px) { .screen { height: 560px; } .panelWrap { width: 260px; } .dockButton > span:not(.progress) { font-size: 9px; } }
+@media(max-width:370px) { .screen { height: 560px; } .panelWrap { width: 260px; } .dockButton > span:not(.progress) { font-size: 10px; } }
 @media(forced-colors:active) { .dockButton[aria-pressed='true'] { outline: 1px solid Highlight; } }
