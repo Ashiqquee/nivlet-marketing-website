@@ -4,6 +4,7 @@ import Link from 'next/link';
 import localFont from 'next/font/local';
 import { ArrowUpRight } from 'lucide-react';
 import { ScrollReveal } from '@/components/scroll-reveal';
+import { DownloadButton } from '@/components/download-button';
 import { site } from '@/lib/site';
 import './globals.css';
 
@@ -41,7 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <header className="site-header wrap">
         <Link href="/" className="brand" aria-label="Nivlet home"><Image src="/brand/nivlet-wordmark.png" width={132} height={44} alt="Nivlet" priority /></Link>
         <nav className="header-links" aria-label="Main"><Link href="/#tour">Tour</Link><Link href="/#tools">Tools</Link><Link href="/#privacy">Privacy</Link><Link href="/#questions">FAQ</Link><Link href="/support">Support</Link></nav>
-        <Link className="nav-status" href="/releases">Release status <ArrowUpRight size={14} aria-hidden="true" /></Link>
+        <DownloadButton className="nav-status" label="Download" />
       </header>
     </div>
     <ScrollReveal />

@@ -157,6 +157,12 @@
       "kind": "official Buy Me a Coffee CDN logo used for the support link",
       "bytes": 8133,
       "sha256": "a668a2adad6bae5ee7e6d669cfa7876a75d572db71ac9a91f30c2e295bedb3de"
+    },
+    {
+      "path": "og/nivlet.jpg",
+      "kind": "social preview card composed from amber-folds.png and the existing wordmark; source artwork/og-card.html",
+      "bytes": 150947,
+      "sha256": "07fe36b7bdb687b20969c133aa5b3d37ed8f520d5602ea870e880c11f7c81bb7"
     }
   ],
   "font": {

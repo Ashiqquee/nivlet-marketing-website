@@ -5,7 +5,9 @@ import { NativeDemo } from '@/components/native-demo';
 import { DemoVideo } from '@/components/demo-video';
 import { ToolCarousel } from '@/components/tool-carousel';
 import { CoffeeSupport } from '@/components/coffee-support';
+import { DownloadButton } from '@/components/download-button';
 import { site } from '@/lib/site';
+import { release } from '@/lib/release';
 
 const keys = [
   { caps: ['⌘', 'F'], label: 'Search the pocket' },
@@ -22,6 +24,7 @@ const structuredData = {
       '@type': 'SoftwareApplication', '@id': `${site.url}/#app`, name: site.name, description: site.description, url: `${site.url}/`,
       applicationCategory: 'UtilitiesApplication', operatingSystem: 'macOS', processorRequirements: 'Apple silicon',
       image: `${site.url}${site.ogImage.url}`, screenshot: `${site.url}/assets/prompts.png`,
+      softwareVersion: release.version, downloadUrl: `${site.url}${release.href}`, fileSize: release.size,
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
       author: { '@type': 'Person', name: site.maker.name, url: site.maker.url },
     },
@@ -36,8 +39,8 @@ export default function Home() {
       <div className="hero-copy wrap">
         <h1 id="hero-title" className="enter" style={{ '--i': 0 } as React.CSSProperties}>Your prompts.<br />One click away.</h1>
         <p className="hero-description enter" style={{ '--i': 1 } as React.CSSProperties}>Prompts, reference files and notes in a native panel at the edge of your Mac. Free, local and offline.</p>
-        <div className="hero-actions enter" style={{ '--i': 2 } as React.CSSProperties}><a className="button primary" href="#tour">See how it works</a><Link className="button secondary" href="/releases">Release status</Link></div>
-        <p className="hero-meta enter" style={{ '--i': 3 } as React.CSSProperties}>Free · Apple silicon · Coming soon</p>
+        <div className="hero-actions enter" style={{ '--i': 2 } as React.CSSProperties}><DownloadButton /><a className="button secondary" href="#tour">See how it works</a></div>
+        <div className="hero-meta enter" style={{ '--i': 3 } as React.CSSProperties}><p>{release.macOSName} or later and Apple silicon required</p><p className="hero-links"><Link href="/releases#install">How to install</Link><Link href="/releases">Version {release.version} release notes</Link></p></div>
         <a className="announcement enter" style={{ '--i': 4 } as React.CSSProperties} href="#tools">Four tools in one panel <ArrowRight size={14} aria-hidden="true" /></a>
       </div>
     </section>
@@ -75,17 +78,17 @@ export default function Home() {
 
     <section className="questions wrap" id="questions" aria-labelledby="questions-title"><div data-reveal><h2 id="questions-title">Questions</h2><p>Anything else? <Link href="/support">Visit support</Link>.</p></div><div className="faq-list" data-reveal>
       <details><summary>Is Nivlet free?</summary><p>Yes. No trial, licence or feature paywall. You can <a href="https://buymeacoffee.com/ashiqquee" rel="noreferrer">buy the maker a coffee</a> if it’s useful. Support is optional and doesn’t unlock anything.</p></details>
-      <details><summary>Can I download it yet?</summary><p>Not yet. Nivlet is coming soon as a signed, notarized download from this website. <Link href="/releases">See what’s in the first release</Link>.</p></details>
-      <details><summary>Which Macs and apps does it work with?</summary><p>Nivlet runs on Macs with Apple silicon and has been tested on macOS 26. It works alongside any AI app or website, because you choose what to copy or drag into it. <Link href="/compatibility">See the requirements</Link>.</p></details>
+      <details><summary>How do I install it?</summary><p>Download the disk image, open it and drag Nivlet into Applications. {release.notarized ? 'Then open Nivlet from Applications.' : 'This early version isn’t notarized by Apple yet, so the first time you open it you’ll need to approve it once in System Settings.'} <Link href="/releases#install">See the install steps</Link>.</p></details>
+      <details><summary>Which Macs and apps does it work with?</summary><p>Nivlet needs a Mac with Apple silicon and macOS Sonoma or later. It works alongside any AI app or website, because you choose what to copy or drag into it. <Link href="/compatibility">See the requirements</Link>.</p></details>
       <details><summary>Does it connect to ChatGPT or Claude?</summary><p>You use your existing AI app. Nivlet has no model connection or API key. You choose when to paste or attach, and check upload completion yourself. External AI service fees remain separate.</p></details>
-      <details><summary>How do I back up my work?</summary><p>Export one or all pockets with their original files. Restore validates the archive and adds new pockets without replacing existing ones. Before updates, also keep a complete closed-library backup. <Link href="/support#recovery">Read the recovery steps</Link>.</p></details>
+      <details><summary>How do I back up my work?</summary><p>Export one or all pockets with their files. Restoring an export adds its pockets alongside yours and never replaces anything. Before updating, it’s also worth making a full backup. <Link href="/support#recovery">Read the recovery steps</Link>.</p></details>
     </div></section>
 
     <CoffeeSupport />
 
     <section className="final-cta" aria-labelledby="final-title">
       <Beams variant="final" />
-      <div className="wrap" data-reveal><h2 id="final-title">Keep your kit within reach.</h2><p>Free, offline and always right beside your AI app.</p><div className="hero-actions"><a className="button primary" href="#tour">See how it works</a><Link className="button secondary" href="/releases">Release status</Link></div></div>
+      <div className="wrap" data-reveal><h2 id="final-title">Keep your kit within reach.</h2><p>Free, offline and always right beside your AI app.</p><div className="hero-actions"><DownloadButton /><Link className="button secondary" href="/releases">Release notes</Link></div></div>
     </section>
   </main>;
 }

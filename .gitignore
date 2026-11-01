@@ -2,3 +2,10 @@ dist/
 .next/
 out/
 *.tsbuildinfo
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log

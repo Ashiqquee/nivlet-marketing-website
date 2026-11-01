@@ -52,6 +52,5 @@ export function NativeDemo() {
       <p key={shot.id} className={styles.caption}><strong>{shot.title}</strong> {shot.body}</p>
       <button className={styles.toggle} onClick={() => setPlaying(value => !value)} aria-label={playing ? 'Pause the tour' : 'Play the tour'}>{playing ? <Pause size={13} aria-hidden="true" /> : <Play size={13} fill="currentColor" aria-hidden="true" />}</button>
     </div>
-    <p className={styles.note}>Actual native app with sample content.</p>
   </div>;
 }

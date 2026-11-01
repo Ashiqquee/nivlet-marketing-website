@@ -1,6 +1,6 @@
 # Nivlet website
 
-Next.js App Router, TypeScript, Tailwind CSS and locally hosted **Geist**. Static export; no backend, analytics, forms or external font requests. Local review only; no public download or deployment.
+Next.js App Router, TypeScript, Tailwind CSS and locally hosted **Geist**. Static export; no backend, analytics, forms or external font requests. Serves the Mac download (`public/download/`) described by `lib/release.json`. No deployment has been performed from this repository.
 
 ```sh
 cd website
@@ -35,8 +35,10 @@ The support section uses the [official Buy Me a Coffee cup](https://cdn.buymeaco
 - `components/tool-icon.tsx`: shared vector icons and app tiles.
 - `lib/content.mjs`: repository-owned supporting copy.
 - `app/globals.css` and `components/native-demo.module.css`: shared tokens and showcase geometry alongside Tailwind.
-- `scripts/verify-export.mjs`: exported local links/anchors, native-media hashes, design-asset hashes, no external `src`/`poster` (the CSP would block it) and an unexpired `security.txt`.
+- `scripts/verify-export.mjs`: exported local links/anchors, native-media hashes, design-asset hashes, the download’s size/SHA-256 against `lib/release.json`, no external `src`/`poster` (the CSP would block it) and an unexpired `security.txt`.
+- `scripts/sync-release.mjs`, `lib/release.json`, `components/download-button.tsx`, `components/update-status.tsx`: the Mac download. Every Download button, the release page and its install steps read `release.json`; the site shows only the version, never the build number or checksum. The app's Check for Updates… opens `/releases/?installed=<version>&build=<build>`, and the page compares that build in the browser.
 - `vercel.json`: production security headers for `nivlet.ashique.work` (CSP, HSTS, nosniff, frame denial, referrer, permissions and cross-origin policies). A static export can't set headers from `next.config.ts`, and nonce CSP needs a server, so scripts allow Next's inline bootstrap while every source stays `'self'`. `npm run preview` sends the same headers, without the HTTPS-only parts.
+- `lib/site.ts`: domain, shared description, social image and the `indexable` switch. It feeds the root metadata (canonical, Open Graph, Twitter card, theme colour), per-page titles/descriptions from `lib/content.mjs`, `app/robots.ts`, `app/sitemap.ts` and the home page's JSON-LD. Flip `indexable` to `true` at launch to replace `noindex`. The 1200 × 630 card `public/og/nivlet.jpg` is rendered from `artwork/og-card.html`; `npm run verify` checks every page's canonical, description and `og:image` against the sitemap.
 - `public/.well-known/security.txt`: security contact; renew `Expires` before 1 November 2027.
 
 Dependency versions are locked. `out/` and `.next/` are ignored. No full Swift regression is required for these website-only changes. Browser, build and design evidence is recorded in [the refinement review](../docs/implementation/phase8-release/website-refinement.md).
@@ -49,8 +51,20 @@ Research for the copy/layout pass: [NN/g’s aesthetic and minimalist design](ht
 
 Video research: [NN/g video usability](https://www.nngroup.com/articles/video-usability/), [Wistia controls and chapters](https://support.wistia.com/en/articles/8284255-customize-your-video), and [Screen Studio’s readable framing](https://screen.studio/). Applied as short, controlled playback, readable crops, a visible duration and textual alternatives.
 
+## Updating the download
+
+Build and verify a candidate from the app repository root, then copy it in:
+
+```sh
+python3 scripts/distribute.py build --local --version 0.2 --build-number 3 --output build/WebDownload-0.2-3
+python3 scripts/distribute.py verify --input build/WebDownload-0.2-3
+cd website && npm run sync-release -- ../build/WebDownload-0.2-3 && npm run build && npm run verify
+```
+
+`sync-release` rejects failed or tampered candidates, replaces the old DMG with `Nivlet-<version>.dmg` and rewrites `lib/release.json`. Use a new build number each time. Version 0.1 (build 5) is ad-hoc signed and **not notarized**, so the release page shows the one-time System Settings → Privacy & Security → Open Anyway step. After a Developer ID build passes `distribute.py notarize`, sync that output instead: `notarized` becomes true and the extra step disappears automatically. The DMG (about 2.9 MB) is committed with the site so the static host serves it; move it to a release-asset host if it grows.
+
 ## Before publication
 
-`noindex` remains enabled. Finalize the supported-Mac list, publisher/support contact, hosting/privacy/terms, signed/notarized candidate and exact version/checksum/download URL before asking for publication approval. Keep actions pointed at the release-status page until those checks pass. No registration, signing submission, outreach or deployment was performed.
+`noindex` remains enabled. Finalize the publisher/support contact and hosting/privacy/terms before asking for publication approval. No registration, signing submission, outreach or deployment was performed.
 
 [Phase 8 evidence](../docs/implementation/phase8-release.md) · [Release checklist](../docs/release/checklist.md)
