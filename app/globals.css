@@ -198,6 +198,10 @@
   .prose li { margin-block: 12px; }
   .prose a { color: #e1bc94; }
   .prose .notice { padding: 17px 20px; border: 1px solid #ffffff14; border-radius: 10px; background: #141518; }
+  .prose .install-figure { margin-block: 26px 30px; }
+  .prose .install-figure a { display: block; overflow: hidden; border: 1px solid #ffffff14; border-radius: 12px; }
+  .prose .install-figure img { display: block; width: 100%; height: auto; }
+  .prose .install-figure figcaption { margin-block-start: 11px; color: #a0a0aa; font-size: 13px; line-height: 1.65; }
   .prose .updated { margin-block: -12px 28px; font-family: var(--mono); font-size: 13px; color: var(--quiet); }
   .table-scroll { overflow-x: auto; }
   .prose table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.7; margin-block: 24px; }

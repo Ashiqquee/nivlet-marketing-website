@@ -151,6 +151,12 @@
       "kind": "Real Nivlet and Codex desktop view with simple step labels",
       "bytes": 730,
       "sha256": "905443b2c5776cb5e9febcefc964878d23279a841cd0fa750e81c93bc2de63f4"
+    },
+    {
+      "path": "assets/macos-open-anyway.png",
+      "kind": "Owner-provided macOS Privacy & Security screenshot, unchanged original PNG; release-page first-open instructions",
+      "bytes": 487196,
+      "sha256": "6de94c9e47674aaa585076ff6a98fc4afd8634cbfc7a3b1ca414414242a4949e"
     }
   ],
   "font": {

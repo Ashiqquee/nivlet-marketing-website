@@ -34,6 +34,7 @@ The support section uses the [official Buy Me a Coffee cup](https://cdn.buymeaco
 - `components/coffee-support.tsx`: optional support section with the official Buy Me a Coffee cup.
 - `components/tool-icon.tsx`: shared vector icons and app tiles.
 - `lib/content.mjs`: repository-owned supporting copy.
+- `/releases/#first-open`: explains the maker’s current lack of paid Apple Developer Program membership, why Done only dismisses the warning, and the app-specific Open Anyway approval steps. Includes the owner’s exact Privacy & Security screenshot, with a full-size link and descriptive alt text. This help hides automatically when `release.notarized` is true.
 - `app/globals.css` and `components/native-demo.module.css`: shared tokens and showcase geometry alongside Tailwind.
 - `scripts/verify-export.mjs`: exported local links/anchors, native-media hashes, design-asset hashes, the download’s size/SHA-256 against `lib/release.json`, no external `src`/`poster` (the CSP would block it) and an unexpired `security.txt`.
 - `scripts/sync-release.mjs`, `lib/release.json`, `components/download-button.tsx`, `components/update-status.tsx`: the Mac download. Every Download button, the release page and its install steps read `release.json`; the site shows only the version, never the build number or checksum. The app's Check for Updates… opens `/releases/?installed=<version>&build=<build>`, and the page compares that build in the browser.
