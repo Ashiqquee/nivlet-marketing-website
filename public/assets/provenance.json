@@ -105,48 +105,6 @@
       "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
     },
     {
-      "path": "assets/native-demo-guided-mobile-v2.jpg",
-      "kind": "edited presentation of the original native sample capture; no generated UI",
-      "bytes": 91920,
-      "sha256": "e714d44bec1266012a5553d75bcbcc7758eb080410804830b8f1ca1c388fce5a"
-    },
-    {
-      "path": "assets/native-demo-guided-mobile-v2.mp4",
-      "kind": "edited presentation of the original native sample capture; no generated UI",
-      "bytes": 369524,
-      "sha256": "ff6afd9460b6f5310b072959a6726118930e469e3a41c20f56c9b08c85487641"
-    },
-    {
-      "path": "assets/native-demo-guided-v2-transcript.txt",
-      "kind": "edited presentation of the original native sample capture; no generated UI",
-      "bytes": 1046,
-      "sha256": "1ba28f9ee4e4d256739004ba115633af95724f2cd60902885bc8033eab14b3b9"
-    },
-    {
-      "path": "assets/native-demo-guided-v2.jpg",
-      "kind": "edited presentation of the original native sample capture; no generated UI",
-      "bytes": 85323,
-      "sha256": "504475485a795059e490f544f35cacbe0154b63220272ac2100f7250943b0729"
-    },
-    {
-      "path": "assets/native-demo-guided-v2.json",
-      "kind": "edited presentation of the original native sample capture; no generated UI",
-      "bytes": 2005,
-      "sha256": "ae501d364f09b1199684b1b0c39b8036b1d5655d7b0c0026b644b6198d464c09"
-    },
-    {
-      "path": "assets/native-demo-guided-v2.mp4",
-      "kind": "edited presentation of the original native sample capture; no generated UI",
-      "bytes": 353514,
-      "sha256": "7da2a2cffd96c3d7d37bfcfd8882d52f71e533f5cf3b0f373adfda1977c4fb86"
-    },
-    {
-      "path": "assets/native-demo-guided-v2.vtt",
-      "kind": "edited presentation of the original native sample capture; no generated UI",
-      "bytes": 376,
-      "sha256": "3f05fae2546f5566431a35d81317a299fd5097c6637b081a5e707e65b9e36e8e"
-    },
-    {
       "path": "brand/ashique-favicon.png",
       "kind": "public favicon retrieved from the maker website at owner request",
       "bytes": 551941,
@@ -163,6 +121,36 @@
       "kind": "social preview card composed from amber-folds.png and the existing wordmark; source artwork/og-card.html",
       "bytes": 150947,
       "sha256": "07fe36b7bdb687b20969c133aa5b3d37ed8f520d5602ea870e880c11f7c81bb7"
+    },
+    {
+      "path": "assets/workflow-demo-v1-transcript.txt",
+      "kind": "Real Nivlet and Codex desktop view with simple step labels",
+      "bytes": 2213,
+      "sha256": "a87dbcc29409bbbb90a5bdce5abab24ae796b5e62207d450ccf48cf3ef045dde"
+    },
+    {
+      "path": "assets/workflow-demo-v1.jpg",
+      "kind": "Real Nivlet and Codex desktop view with simple step labels",
+      "bytes": 64946,
+      "sha256": "754f4c7df1efd66fcdb2542a8dab13e2b8346c4701642ff2dd938206feb65463"
+    },
+    {
+      "path": "assets/workflow-demo-v1.json",
+      "kind": "Real Nivlet and Codex desktop view with simple step labels",
+      "bytes": 2716,
+      "sha256": "060fabd8ae7baa13290ac49a72811c8ebee81799607fef68300975ec22fa8c71"
+    },
+    {
+      "path": "assets/workflow-demo-v1.mp4",
+      "kind": "Real Nivlet and Codex desktop view with simple step labels",
+      "bytes": 719160,
+      "sha256": "f51374691fdcc47a81228640239355af29ab86a0a3af74eb6f9233ea8673f7d5"
+    },
+    {
+      "path": "assets/workflow-demo-v1.vtt",
+      "kind": "Real Nivlet and Codex desktop view with simple step labels",
+      "bytes": 730,
+      "sha256": "905443b2c5776cb5e9febcefc964878d23279a841cd0fa750e81c93bc2de63f4"
     }
   ],
   "font": {
@@ -174,18 +162,37 @@
     "browser_external_requests": false
   },
   "video_presentation": {
-    "source": "native-demo.mp4",
+    "source": "artwork/workflow-demo/codex-source-v1.mp4",
+    "source_sha256": "54e0c3998e5faa454867d43ec94328ef051838f27bc51fba390e4c9c322d3088",
     "source_unchanged": true,
-    "desktop": "native-demo-guided-v2.mp4",
-    "mobile": "native-demo-guided-mobile-v2.mp4",
-    "duration_seconds": 14.7,
-    "render_script": "scripts/render_website_demo.py",
-    "edit_decisions": "native-demo-guided-v2.json",
+    "video": "workflow-demo-v1.mp4",
+    "duration_seconds": 26.967,
+    "render_script": "scripts/render-workflow.py",
+    "edit_decisions": "workflow-demo-v1.json",
     "audio": false,
-    "notes": "Idle time trimmed; template typing 1.25x; close crops of original app pixels; Geist editorial text. Not an app performance measurement."
+    "notes": "Both actual apps remain visible throughout, on every screen size. Plain step labels, original action speed, idle/verification pauses trimmed. Nothing sent; no model response; not a performance measurement.",
+    "opening_source": "artwork/workflow-demo/copy-source-v1.mp4",
+    "opening_sha256": "47da535427f5ddb4c302b397d5ad22358b0390c49c5a20e0ae6db0f6222d3f59"
   },
   "external_asset_sources": {
     "brand/ashique-favicon.png": "https://ashique.work/icon.png?icon.1qvn6x09mx0ct.png",
     "support/buy-me-a-coffee.svg": "https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+  },
+  "workflow_recording": {
+    "captured_date": "2026-11-01",
+    "native_bundle": "ashique.nivlet.websiteworkflow",
+    "receiver_bundle": "com.openai.codex",
+    "library": "Isolated synthetic verification-website-demo-v1 / Website launch",
+    "reference": "Original AppKit-drawn Sidebar layout.png; no third-party artwork",
+    "capture": "ScreenCaptureKit display filter including only the native demo panel and the owner-authorized Codex window; no audio",
+    "source_pixels": [
+      2940,
+      1912
+    ],
+    "source_fps": 60,
+    "source_seconds": 39.783333,
+    "output_fps": 30,
+    "clipboard": "Explicit normal-clipboard Copy and Command-V. Prior clipboard held only in memory and restored conditionally.",
+    "verification": "Saved performance and launch-QA strings copied back from Codex and compared exactly. Image thumbnail inspected in the Codex draft. No sending or model output; no universal destination compatibility claim."
   }
 }

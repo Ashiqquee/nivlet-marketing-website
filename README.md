@@ -22,14 +22,14 @@ Raycast’s live site was inspected: it uses Inter, but the owner’s later Geis
 
 The header/footer and favicons use the owner’s existing assets from [nivlet-v1](../output/brand/nivlet-v1/README.md). The transparent original wordmark is rendered white with CSS, preserving its geometry and clearspace. Native app icon integration is separate from website use.
 
-[Amber hero artwork](public/assets/amber-folds.png) was generated and palette-edited with the built-in image_gen tool; [exact prompt set](artwork/amber-folds-prompt.md). It is decorative. The panel screenshots and original 21-second recording are genuine isolated native app captures with synthetic content, not generated UI. The inline walkthrough is a 14.7-second edit of that recording, with separate desktop and mobile crops, chapter controls, optional descriptions and a transcript. It never autoplays or opens a modal. See [asset provenance and hashes](public/assets/provenance.json).
+[Amber hero artwork](public/assets/amber-folds.png) was generated and palette-edited with the built-in image_gen tool; [exact prompt set](artwork/amber-folds-prompt.md). It is decorative. The panel screenshots and original 21-second recording are genuine isolated native app captures with synthetic content, not generated UI. The video section now shows a separate 27-second recording with the real Codex desktop app: two saved prompts, explicit copy/paste, and a UI reference dragged into an unsent draft. Both apps stay in view throughout. The custom player has play/pause, seeking, captions, fullscreen, chapter buttons and copyable example prompts. It never autoplays or opens a modal. See [asset provenance and hashes](public/assets/provenance.json).
 
 The support section uses the [official Buy Me a Coffee cup](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg), stored locally without an embedded widget. The footer links to [Ashique](https://ashique.work) with the owner’s [actual site favicon](https://ashique.work/icon.png?icon.1qvn6x09mx0ct.png). Source URLs and asset hashes are retained in provenance.
 
 ## Structure and verification
 
 - `app/`: shared layout, home page and supporting privacy/support/compatibility/terms/release routes.
-- `components/native-demo.tsx`: screenshot/video selector; switching away unmounts and pauses playback.
+- `components/native-demo.tsx`: the native screenshot tour.
 - `components/demo-video.tsx`: inline, user-controlled recording with chapter navigation and a transcript.
 - `components/coffee-support.tsx`: optional support section with the official Buy Me a Coffee cup.
 - `components/tool-icon.tsx`: shared vector icons and app tiles.
@@ -45,11 +45,17 @@ Dependency versions are locked. `out/` and `.next/` are ignored. No full Swift r
 
 Research for the copy/layout pass: [NN/g’s aesthetic and minimalist design](https://www.nngroup.com/articles/aesthetic-minimalist-design/), [visual hierarchy](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/) and [AI design slop examples](https://www.scoremysite.dev/mistakes/ai-design-slop). Findings were applied to this page; they are references, not an aesthetic certification.
 
-## Recording edit
+## Workflow recording
 
-`scripts/render_website_demo.py` creates both responsive versions from the hashed original. Idle time is removed; the fill-in segment plays at 1.25×. The edit demonstrates functions rather than measuring performance. No copy, upload or model interaction is staged. The exact edit decisions are in `public/assets/native-demo-guided-v2.json`.
+The section at `/#workflow` uses `public/assets/workflow-demo-v1.mp4`. The whole desktop stays visible throughout: Nivlet beside the real Codex app, copying/pasting two prompts and dragging an image into an unsent draft. The short labels use everyday language. No camera zoom focuses on the sidebar.
 
-Video research: [NN/g video usability](https://www.nngroup.com/articles/video-usability/), [Wistia controls and chapters](https://support.wistia.com/en/articles/8284255-customize-your-video), and [Screen Studio’s readable framing](https://screen.studio/). Applied as short, controlled playback, readable crops, a visible duration and textual alternatives.
+The player matches the charcoal and amber site. It provides play/pause/replay, a keyboard-accessible seek bar, elapsed/total time, video descriptions and fullscreen. Controls stay visible; playback never starts automatically. `preload="none"` keeps the video off the network until requested. Native controls remain available before JavaScript starts or if it is disabled. Fullscreen includes the custom controls, with a native iPhone fallback.
+
+The expandable steps and downloadable walkthrough provide a text alternative. The two example prompts can be copied, with manual selection available if clipboard permission is denied. The example’s 50% target is not a measured Nivlet result.
+
+[Recording source and reference](artwork/workflow-demo/README.md) are retained for future edits. Run `python3 scripts/render-workflow.py` after installing the locked website dependencies, FFmpeg and Python fontTools. The parent app repository contains `scripts/capture_website_workflow.swift` for new native captures; the helper requires a fresh Codex draft and the isolated Nivlet panel visible on the same Space. It never presses Send. Both pasted values in the accepted recording were compared exactly to the saved strings, and the attached image thumbnail was visually checked.
+
+Obsolete guided edits and the sidebar-only portrait variant were removed from the current repository. The original native sample capture and four screenshots remain because they support the app tour and its provenance. Local website checks do not complete native release gates.
 
 ## Updating the download
 

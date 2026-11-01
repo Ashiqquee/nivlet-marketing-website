@@ -1,0 +1,51 @@
+{
+  "bundle" : "ashique.nivlet.websiteworkflow",
+  "codex_frame" : [
+    0,
+    33,
+    1470,
+    923
+  ],
+  "exact_prompt_copy_and_paste" : true,
+  "general_clipboard_restored_if_unchanged" : true,
+  "marks" : [
+    {
+      "time" : 7.9870223999023438e-06,
+      "title" : "Saved prompts"
+    },
+    {
+      "time" : 5.2146000862121582,
+      "title" : "Copy prompt"
+    },
+    {
+      "time" : 7.380391001701355,
+      "title" : "Paste into Codex"
+    },
+    {
+      "time" : 15.517340064048767,
+      "title" : "Launch QA prompt"
+    },
+    {
+      "time" : 19.015013098716736,
+      "title" : "Paste launch QA into Codex"
+    },
+    {
+      "time" : 28.225551009178162,
+      "title" : "UI reference"
+    },
+    {
+      "time" : 30.590774059295654,
+      "title" : "Drag reference"
+    },
+    {
+      "time" : 33.280034065246582,
+      "title" : "Check attachment in Codex"
+    }
+  ],
+  "receiver" : "Actual open Codex desktop app (com.openai.codex); explicit Command-V; real pointer file drag; nothing sent",
+  "screen" : [
+    1470,
+    956
+  ],
+  "source" : "workflow-source.mp4"
+}

@@ -1,0 +1,111 @@
+{
+  "source": "artwork/workflow-demo/codex-source-v1.mp4",
+  "source_sha256": "54e0c3998e5faa454867d43ec94328ef051838f27bc51fba390e4c9c322d3088",
+  "opening_source": "artwork/workflow-demo/copy-source-v1.mp4",
+  "opening_sha256": "47da535427f5ddb4c302b397d5ad22358b0390c49c5a20e0ae6db0f6222d3f59",
+  "duration": 26.967,
+  "desktop": [
+    1440,
+    900
+  ],
+  "framing": "Both apps remain visible throughout on every screen size",
+  "fps": 30,
+  "audio": false,
+  "chapters": [
+    {
+      "title": "Your prompts",
+      "time": 0
+    },
+    {
+      "title": "Copy & paste",
+      "time": 5.2
+    },
+    {
+      "title": "Pick another",
+      "time": 9.6
+    },
+    {
+      "title": "Add an image",
+      "time": 16.367
+    }
+  ],
+  "edits": [
+    {
+      "start": 0,
+      "end": 2.7,
+      "title": "Pick a saved prompt.",
+      "kind": "panel",
+      "chapter": "Your prompts",
+      "frames": 81,
+      "source": "copy-source-v1.mp4",
+      "output_start": 0
+    },
+    {
+      "start": 2.7,
+      "end": 5.215,
+      "title": "Choose the one you need.",
+      "kind": "panel",
+      "frames": 75,
+      "source": "copy-source-v1.mp4",
+      "output_start": 2.7
+    },
+    {
+      "start": 5.215,
+      "end": 7.38,
+      "title": "Click Copy prompt.",
+      "kind": "panel",
+      "chapter": "Copy & paste",
+      "frames": 65,
+      "source": "copy-source-v1.mp4",
+      "output_start": 5.2
+    },
+    {
+      "start": 7.38,
+      "end": 9.6,
+      "title": "Paste into your chat.",
+      "kind": "paste",
+      "frames": 67,
+      "source": "copy-source-v1.mp4",
+      "output_start": 7.367
+    },
+    {
+      "start": 15.517,
+      "end": 19.015,
+      "title": "Pick another prompt.",
+      "kind": "panel",
+      "chapter": "Pick another",
+      "frames": 105,
+      "source": "codex-source-v1.mp4",
+      "output_start": 9.6
+    },
+    {
+      "start": 19.015,
+      "end": 22.295,
+      "title": "Copy and paste. That\u2019s it.",
+      "kind": "qa",
+      "frames": 98,
+      "source": "codex-source-v1.mp4",
+      "output_start": 13.1
+    },
+    {
+      "start": 28.226,
+      "end": 33.28,
+      "title": "Drag an image into your chat.",
+      "kind": "wide",
+      "chapter": "Add an image",
+      "frames": 152,
+      "source": "codex-source-v1.mp4",
+      "output_start": 16.367
+    },
+    {
+      "start": 33.28,
+      "end": 38.8,
+      "title": "Your text and image. Ready to send.",
+      "kind": "attached",
+      "frames": 166,
+      "source": "codex-source-v1.mp4",
+      "output_start": 21.433
+    }
+  ],
+  "notes": "Real Nivlet and Codex pixels. Full desktop view, simple step labels and removed verification/idle pauses. No fabricated copy, file attachment, sending or model response."
+}

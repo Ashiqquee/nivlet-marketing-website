@@ -71,8 +71,8 @@ export default function Home() {
       <p className="center-link" data-reveal><Link className="text-link" href="/privacy">Read the privacy policy <ArrowUpRight size={14} aria-hidden="true" /></Link></p>
     </section>
 
-    <section className="video-section wrap" aria-labelledby="video-title">
-      <div className="section-intro center quiet" data-reveal><h2 id="video-title">Watch it work.</h2><p>A 15-second walkthrough of the native app.</p></div>
+    <section className="video-section wrap" id="workflow" aria-labelledby="video-title">
+      <div className="section-intro center quiet" data-reveal><h2 id="video-title">See how it works.</h2><p>Copy a saved prompt. Drop in an image.<br />Keep going in your chat.</p></div>
       <div className="video-shell" data-reveal><DemoVideo /></div>
     </section>
 

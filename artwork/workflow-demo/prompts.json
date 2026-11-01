@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Make React feel faster",
+    "text": "Increase the app performance noticeably by at least 50%. Optimise React, erase bloat dependencies, shrink the JS bundle as much as you can, and make sure that a user with weak internet doesn't have a terrible experience. Address mobile as well as desktop sizes. This is a goal and you shouldn't stop until done."
+  },
+  {
+    "title": "Run a launch QA review",
+    "text": "Act as my launch QA lead. Spin up 5 subagents, each a different first-time user:\n1. The impatient one: skims, clicks the first button, quits at the first error\n2. The skeptic: reads pricing, terms and privacy before signing up\n3. The mobile user: does everything on a 375px screen on slow 3G\n4. The non-native English speaker: only follows what the UI literally says\n5. The breaker: pastes junk into forms, hits back mid-flow, double-clicks everything\n\nEach one opens the app in a real browser, goes from landing page to first success, and screenshots every moment they get confused, stuck or annoyed.\n\nMerge everything into one list ranked by how many users hit it. Fix it all in one pass, then rerun the 5 users to prove it's fixed."
+  }
+]

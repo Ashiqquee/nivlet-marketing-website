@@ -1,0 +1,37 @@
+Nivlet → Codex: saved prompts and a UI reference
+
+Open Nivlet beside the real Codex app. The Website launch pocket has two saved prompts.
+
+Choose a prompt from the list.
+
+Choose Copy prompt. The native app confirms the copy.
+
+Press Command-V to paste the saved text into Codex.
+
+Choose another saved prompt.
+
+Copy and paste the other prompt into your chat. Nothing is sent.
+
+Open References and drag an image into your chat.
+
+The image thumbnail appears in the Codex composer beside the prompt. Check the attachment before sending.
+
+Prompts used in this demo
+
+Make React feel faster
+Increase the app performance noticeably by at least 50%. Optimise React, erase bloat dependencies, shrink the JS bundle as much as you can, and make sure that a user with weak internet doesn't have a terrible experience. Address mobile as well as desktop sizes. This is a goal and you shouldn't stop until done.
+
+Run a launch QA review
+Act as my launch QA lead. Spin up 5 subagents, each a different first-time user:
+1. The impatient one: skims, clicks the first button, quits at the first error
+2. The skeptic: reads pricing, terms and privacy before signing up
+3. The mobile user: does everything on a 375px screen on slow 3G
+4. The non-native English speaker: only follows what the UI literally says
+5. The breaker: pastes junk into forms, hits back mid-flow, double-clicks everything
+
+Each one opens the app in a real browser, goes from landing page to first success, and screenshots every moment they get confused, stuck or annoyed.
+
+Merge everything into one list ranked by how many users hit it. Fix it all in one pass, then rerun the 5 users to prove it's fixed.
+
+Recording notes
+Actual Nivlet Debug app using an isolated synthetic library, and the owner’s open Codex desktop app. Both pasted prompts were checked against the saved text. The image attachment was visually checked in the Codex composer. No prompt was submitted and no model response is shown. The edit combines two actual takes and removes idle time and verification selections, keeps both apps in view and adds simple step labels, and runs actions at their recorded speed. It is not a performance measurement or a promise about every destination app.
