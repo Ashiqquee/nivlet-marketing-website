@@ -1,15 +1,15 @@
 {
   "version": "0.2",
-  "build": "8",
+  "build": "9",
   "href": "/download/Nivlet-0.2.dmg",
   "file": "Nivlet-0.2.dmg",
-  "bytes": 2900444,
-  "sha256": "7ae672b003ed163f570291c3fceb6abbfc06c808634c03ae77e3abc337967d2f",
+  "bytes": 2903335,
+  "sha256": "dfb988d7859ab1e9e29dceec7dd4652193ae645edb2c3a7b20cb975d387ff397",
   "notarized": false,
   "minimumMacOS": "14.0",
   "architectures": [
     "arm64"
   ],
-  "sourceCommit": "0a616bf30c59b03fabd7c97c2940c34dee0f8402",
+  "sourceCommit": "f39daab631a58692cebf97535e268d3b1d5e5756",
   "date": "2026-11-02"
 }

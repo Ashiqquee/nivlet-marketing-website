@@ -63,12 +63,12 @@ Obsolete guided edits and the sidebar-only portrait variant were removed from th
 Build and verify a candidate from the app repository root, then copy it in:
 
 ```sh
-python3 scripts/distribute.py build --local --version 0.2 --build-number 8 --output build/WebDownload-0.2-8
-python3 scripts/distribute.py verify --input build/WebDownload-0.2-8
-cd website && npm run sync-release -- ../build/WebDownload-0.2-8 && npm run build && npm run verify
+python3 scripts/distribute.py build --local --version 0.2 --build-number 9 --output build/WebDownload-0.2-9
+python3 scripts/distribute.py verify --input build/WebDownload-0.2-9
+cd website && npm run sync-release -- ../build/WebDownload-0.2-9 && npm run build && npm run verify
 ```
 
-`sync-release` rejects failed or tampered candidates, replaces the old DMG with `Nivlet-<version>.dmg` and rewrites `lib/release.json`. Use a new build number each time. Version 0.2 (build 8) is ad-hoc signed and **not notarized**, so the release page shows the one-time System Settings → Privacy & Security → Open Anyway step. After a Developer ID build passes `distribute.py notarize`, sync that output instead: `notarized` becomes true and the extra step disappears automatically. The DMG (about 2.9 MB) is committed with the site so the static host serves it; move it to a release-asset host if it grows.
+`sync-release` rejects failed or tampered candidates, replaces the old DMG with `Nivlet-<version>.dmg` and rewrites `lib/release.json`. Use a new build number each time. Version 0.2 (build 9) is ad-hoc signed and **not notarized**, so the release page shows the one-time System Settings → Privacy & Security → Open Anyway step. After a Developer ID build passes `distribute.py notarize`, sync that output instead: `notarized` becomes true and the extra step disappears automatically. The DMG (about 2.9 MB) is committed with the site so the static host serves it; move it to a release-asset host if it grows.
 
 ## Before publication
 
