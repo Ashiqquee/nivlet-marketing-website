@@ -1,6 +1,6 @@
 # Nivlet website
 
-Next.js App Router, TypeScript, Tailwind CSS and locally hosted **Geist**. Static export; no backend, analytics, forms or external font requests. Serves the Mac download (`public/download/`) described by `lib/release.json`. No deployment has been performed from this repository.
+Next.js App Router, TypeScript, Tailwind CSS and locally hosted **Geist**. Static export; no backend, analytics, forms or external font requests. Serves the Mac download (`public/download/`) described by `lib/release.json`. Production site: https://nivlet.ashique.work.
 
 ```sh
 cd website
@@ -63,15 +63,15 @@ Obsolete guided edits and the sidebar-only portrait variant were removed from th
 Build and verify a candidate from the app repository root, then copy it in:
 
 ```sh
-python3 scripts/distribute.py build --local --version 0.2 --build-number 3 --output build/WebDownload-0.2-3
-python3 scripts/distribute.py verify --input build/WebDownload-0.2-3
-cd website && npm run sync-release -- ../build/WebDownload-0.2-3 && npm run build && npm run verify
+python3 scripts/distribute.py build --local --version 0.2 --build-number 8 --output build/WebDownload-0.2-8
+python3 scripts/distribute.py verify --input build/WebDownload-0.2-8
+cd website && npm run sync-release -- ../build/WebDownload-0.2-8 && npm run build && npm run verify
 ```
 
-`sync-release` rejects failed or tampered candidates, replaces the old DMG with `Nivlet-<version>.dmg` and rewrites `lib/release.json`. Use a new build number each time. Version 0.1 (build 5) is ad-hoc signed and **not notarized**, so the release page shows the one-time System Settings → Privacy & Security → Open Anyway step. After a Developer ID build passes `distribute.py notarize`, sync that output instead: `notarized` becomes true and the extra step disappears automatically. The DMG (about 2.9 MB) is committed with the site so the static host serves it; move it to a release-asset host if it grows.
+`sync-release` rejects failed or tampered candidates, replaces the old DMG with `Nivlet-<version>.dmg` and rewrites `lib/release.json`. Use a new build number each time. Version 0.2 (build 8) is ad-hoc signed and **not notarized**, so the release page shows the one-time System Settings → Privacy & Security → Open Anyway step. After a Developer ID build passes `distribute.py notarize`, sync that output instead: `notarized` becomes true and the extra step disappears automatically. The DMG (about 2.9 MB) is committed with the site so the static host serves it; move it to a release-asset host if it grows.
 
 ## Before publication
 
-`noindex` remains enabled. Finalize the publisher/support contact and hosting/privacy/terms before asking for publication approval. No registration, signing submission, outreach or deployment was performed.
+`noindex` remains enabled. The owner authorized the 0.2 download update on 2 November 2026. Push the reviewed website commit to `main`, then verify the production release page and downloaded DMG hash. Developer ID signing, notarization and remaining native acceptance checks are still open.
 
 [Phase 8 evidence](../docs/implementation/phase8-release.md) · [Release checklist](../docs/release/checklist.md)
